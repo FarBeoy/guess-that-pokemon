@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess That Pokémon</title>
+
+    <link rel="stylesheet" href="src/styles/game.css">
+    <link rel="stylesheet" href="src/styles/pokedex.css">
+
+    <script type="module" src="src/scripts/game.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Guess that Pokémon</h1>
+    <input id="guess" type="text" placeholder="Enter Pokémon name">
+    <button id="submit">Submit</button>
+    <button id="pokedexBtn">Open Pokédex</button>
+
+    <table border="1" id="clue-table">
+        <thead>
+            <tr>
+                <th>Generation</th>
+                <th>Type</th>
+                <th>Color</th>
+                <th>Evolution Stage</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2 id="result"></h2>
+    <img id="pokemon-img" width="150">
+    <br>
+    <button id="resetBtn">Reset Game</button>
+
+    <div id="errorModal" class="errorModal">
+        <div class="error-content">
+            <p id="errorMessage"></p>
+            <button id="errorClose">Close</button>
+        </div>
+    </div>
+
+    <div id="pokedexModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Pokédex</h2>
+
+            <label for="genSelect">Select Generation:</label>
+            <select id="genSelect">
+                <option value="1">Generation 1 (Kanto)</option>
+                <option value="2">Generation 2 (Johto)</option>
+                <option value="3">Generation 3 (Hoenn)</option>
+                <option value="4">Generation 4 (Sinnoh)</option>
+                <option value="5">Generation 5 (Unova)</option>
+                <option value="6">Generation 6 (Kalos)</option>
+                <option value="7">Generation 7 (Alola)</option>
+                <option value="8">Generation 8 (Galar)</option>
+                <option value="9">Generation 9 (Paldea)</option>
+            </select>
+
+            <div id="pokedexList" class="pokedex-list"></div>
+        </div>
+    </div>
+</body>
+
+</html>
